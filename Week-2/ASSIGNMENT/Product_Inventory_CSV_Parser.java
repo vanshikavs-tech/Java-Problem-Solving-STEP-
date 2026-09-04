@@ -1,3 +1,4 @@
+package ASSIGNMENT;
 import java.util.Scanner;
 
 public class Product_Inventory_CSV_Parser {
