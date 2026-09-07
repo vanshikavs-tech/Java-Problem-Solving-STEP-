@@ -1,0 +1,65 @@
+package Week-6.PRACTICPROBLEMS;
+
+class Course {
+
+    String code;
+    String title;
+    int credits;
+    int labCredits;
+
+    // Four-argument constructor
+    public Course(
+        String code,
+        String title,
+        int credits,
+        int labCredits
+    ) {
+        this.code = code;
+        this.title = title;
+        this.credits = credits;
+        this.labCredits = labCredits;
+    }
+
+    // Three-argument constructor
+    public Course(
+        String code,
+        String title,
+        int credits
+    ) {
+        // Constructor chaining
+        this(code, title, credits, 0);
+    }
+
+    // Calculate total credits
+    public int totalCredits() {
+        return credits + labCredits;
+    }
+
+    public static void main(String[] args) {
+
+        Course theory =
+            new Course(
+                "21CSC201J",
+                "Data Structures",
+                4
+            );
+
+        Course lab =
+            new Course(
+                "21CSC205L",
+                "DSA Lab",
+                3,
+                1
+            );
+
+        System.out.println(
+            theory.code + " total credits: "
+            + theory.totalCredits()
+        );
+
+        System.out.println(
+            lab.code + " total credits: "
+            + lab.totalCredits()
+        );
+    }
+}
